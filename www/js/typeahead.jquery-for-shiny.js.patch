@@ -1,0 +1,30 @@
+--- typeahead.jquery.js	
++++ typeahead.jquery-for-shiny.js
+@@ -1037,6 +1037,11 @@
+             getVal: function getVal() {
+                 return this.input.getQuery();
+             },
++            updateHints: function updateHints() {
++                var query = this.input.getQuery();
++                this.dropdown.update(query);
++                this.dropdown.open();
++            },
+             destroy: function destroy() {
+                 this.input.destroy();
+                 this.dropdown.destroy();
+@@ -1154,6 +1159,15 @@
+                     return query;
+                 }
+             },
++            updateHints: function() {
++                return this.each(updateTypeahead);
++                function updateTypeahead() {
++                    var $input = $(this), typeahead;
++                    if (typeahead = $input.data(typeaheadKey)) {
++                        typeahead.updateHints();
++                    }
++                }
++            },
+             destroy: function destroy() {
+                 return this.each(unattach);
+                 function unattach() {

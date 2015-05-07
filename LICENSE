@@ -1,0 +1,11 @@
+This project includes other open source software components. The following is
+a list of these components and their respective licenses.
+
+- Shiny, https://github.com/rstudio/shiny/blob/master/LICENSE (GPL-3 license)
+- typeahead.js, https://github.com/twitter/typeahead.js/blob/master/LICENSE
+  (MIT License)
+
+Modified typeahead.js files are distributed under their original MIT License.
+Modified Shiny files are distributed under their original GPL-3 License. Files
+specific to this project are distributed under GPL-3 (GNU GENERAL PUBLIC
+LICENSE version 3).
